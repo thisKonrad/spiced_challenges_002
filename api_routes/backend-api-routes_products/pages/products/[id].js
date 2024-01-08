@@ -34,8 +34,8 @@ export default function Details() {
             </div>
             <section>
                 <ul>
-                    {data && data.map((prod) => prod.id === ID ?
-                        <li>
+                    {data && data.filter((prod) => prod.id === ID ?
+                        <li key={prod.id}>
                             <div>
                                 <h1>{prod.name}</h1>
                                 <p>{prod.description}</p>
@@ -43,7 +43,8 @@ export default function Details() {
                                 <p>{prod.currency}</p>
                                 <p>{prod.category}</p>
                             </div>
-                        </li>)}
+                        </li>
+                        : null)}
                 </ul>
             </section>
         </main >
