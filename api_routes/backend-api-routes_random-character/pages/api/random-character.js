@@ -3,13 +3,13 @@ import Chance from 'chance';
 const chance = new Chance();
 
 
-
 export default function ChanceName(req, res) {
+
+    console.log(chance);
 
     if (!chance) {
         res.status(404).json({ status: 'Not Found!' });
     }
-
 
     const char = {
         firstName: chance.first(),
@@ -22,8 +22,6 @@ export default function ChanceName(req, res) {
     };
 
     res.status(200).json(char);
-
-
 
 }
 
