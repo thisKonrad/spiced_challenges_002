@@ -29,7 +29,8 @@ You can use the following hints as guideline:
 const character = {
   firstName: chance.first(),
   lastName: chance.last(),
-  // ... some more keys here ...
+
+
 };
 ```
 

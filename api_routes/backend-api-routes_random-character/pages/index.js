@@ -5,6 +5,6 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 
 export default function HomePage() {
-  const { data } = useSWR("./api/random-character.js", fetcher);
-  return <h1>Hello {data.name}!</h1>;
+  const { data } = useSWR("./api", fetcher);
+  return <h1>Hello {data}!</h1>;
 }
